@@ -1,98 +1,47 @@
 {
-  "users": [
+  "results": [
     {
-      "results": [
-        {
-          "gender": "male",
-          "name": {
-            "title": "mr",
-            "first": "romain",
-            "last": "hoogmoed"
-          },
-          "location": {
-            "street": "1861 jan pieterszoon coenstraat",
-            "city": "maasdriel",
-            "state": "zeeland",
-            "postcode": 69217
-          },
-          "email": "romain.hoogmoed@example.com",
-          "login": {
-            "username": "lazyduck408",
-            "password": "jokers",
-            "salt": "UGtRFz4N",
-            "md5": "6d83a8c084731ee73eb5f9398b923183",
-            "sha1": "cb21097d8c430f2716538e365447910d90476f6e",
-            "sha256": "5a9b09c86195b8d8b01ee219d7d9794e2abb6641a2351850c49c309f1fc204a0"
-          },
-          "dob": "1983-07-14 07:29:45",
-          "registered": "2010-09-24 02:10:42",
-          "phone": "(656)-976-4980",
-          "cell": "(065)-247-9303",
-          "id": {
-            "name": "BSN",
-            "value": "04242023"
-          },
-          "picture": {
-            "large": "https://randomuser.me/api/portraits/men/83.jpg",
-            "medium": "https://randomuser.me/api/portraits/med/men/83.jpg",
-            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/83.jpg"
-          },
-          "nat": "NL"
-        }
-      ],
-      "info": {
-        "seed": "2da87e9305069f1d",
-        "results": 1,
-        "page": 1,
-        "version": "1.1"
-      }
-    },
-    {
-      "results": [
-        {
-          "gender": "female",
-          "name": {
-            "title": "mrs",
-            "first": "laura",
-            "last": "sørensen"
-          },
-          "location": {
-            "street": "7249 rønne alle",
-            "city": "nørrebro",
-            "state": "midtjylland",
-            "postcode": 62037
-          },
-          "email": "laura.sørensen@example.com",
-          "login": {
-            "username": "organicbear884",
-            "password": "bugger",
-            "salt": "TKaQQdUF",
-            "md5": "ab810bc1f8cedbdaef091d3a89aa939c",
-            "sha1": "59c099c6fe331f68efe66a881ebfd718f1627dd3",
-            "sha256": "d89aae33b53b80f8c09528e194c1201c28f2762b64898b5ae9744ba0460a12b6"
-          },
-          "dob": "1958-02-02 17:34:33",
-          "registered": "2013-03-15 08:12:08",
-          "phone": "01939638",
-          "cell": "78478094",
-          "id": {
-            "name": "CPR",
-            "value": "031183-3803"
-          },
-          "picture": {
-            "large": "https://randomuser.me/api/portraits/women/15.jpg",
-            "medium": "https://randomuser.me/api/portraits/med/women/15.jpg",
-            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/15.jpg"
-          },
-          "nat": "DK"
-        }
-      ],
-      "info": {
-        "seed": "e56e5a8d0c7923b2",
-        "results": 1,
-        "page": 1,
-        "version": "1.1"
-      }
+      "gender": "female",
+      "name": {
+        "title": "mrs",
+        "first": "sofie",
+        "last": "olsen"
+      },
+      "location": {
+        "street": "2984 søndergårds haver",
+        "city": "københavn s",
+        "state": "midtjylland",
+        "postcode": 84737
+      },
+      "email": "sofie.olsen@example.com",
+      "login": {
+        "username": "purplesnake114",
+        "password": "hetfield",
+        "salt": "L19XXueU",
+        "md5": "0aea6d1fcff74867d14cfe300036b53f",
+        "sha1": "5136afb1739304ce0794f4ca6f417b899def69c6",
+        "sha256": "5e9a6d4d65d736a0f4f0e69eabf60c7d945d04acbca962d3ee45d80ac0886181"
+      },
+      "dob": "1948-07-12 02:06:13",
+      "registered": "2008-01-01 04:37:18",
+      "phone": "67960386",
+      "cell": "04923201",
+      "id": {
+        "name": "CPR",
+        "value": "520556-1123"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/38.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/38.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/38.jpg"
+      },
+      "nat": "DK"
     }
-  ]
+  ],
+  "info": {
+    "seed": "1cbc98a943a17404",
+    "results": 1,
+    "page": 1,
+    "version": "1.1"
+  }
 }
