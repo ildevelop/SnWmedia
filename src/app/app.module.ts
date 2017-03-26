@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import {UserComponent} from "./user/user.component";
 import {UserService} from "./user/user.service";
+import "../../node_modules/animate.less/animate.less";
 
 @NgModule({
   declarations: [

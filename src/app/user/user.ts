@@ -10,9 +10,11 @@ export class User {
   login:{};
   phone:string;
   picture:{};
+  dob:string;
+  registered:string;
 
 
-  constructor(id,gender,name,location,email,login,phone,picture){
+  constructor(id,gender,name,location,email,login,phone,picture,dob,reg){
     //
     this.id=id;
     this.gender=gender;
@@ -22,6 +24,8 @@ export class User {
     this.login=login;
     this.phone=phone;
     this.picture=picture;
+    this.dob=dob;
+    this.registered=reg;
   }
 
   toString(){

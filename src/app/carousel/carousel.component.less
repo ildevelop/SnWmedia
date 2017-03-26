@@ -1,7 +1,7 @@
 .multi-item-carousel{
   .carousel-inner{
     > .item{
-      transition: 1500ms ease-in-out left;
+      transition: 5000ms ease-in-out;
     }
     .active{
       &.left{
@@ -15,15 +15,15 @@
       left: 50%;
     }
     .prev{
-      left: -50%;
+      left: -100%;
     }
-    @media all and (transform-3d), (-webkit-transform-3d) {
+    @media all and (transform-2d), (-webkit-transform-2d) {
       > .item{
         // use your favourite prefixer here
-        transition: 500ms ease-in-out center;
-        transition: 500ms ease-in-out all;
+        transition: 18000ms ease-in-out center;
+        transition: 18000ms ease-in-out all;
         //backface-visibility: visible;
-        //transform: none!important;
+        transform: none!important;
       }
     }
   }

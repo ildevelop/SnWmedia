@@ -4,53 +4,92 @@
     <div class="app-container">
       <!-- @main page view -->
       <div class="view-main">
-        <div class="header-wrapp">
-          <div *ngFor='let user of users'>
-          <div class="app-detail">
-            <div>
-
-              <img [src]='user.picture["large"]' alt="">
+        <div *ngFor='let user of users'>
+          <div class="header-wrapp">
+            <div class="app-detail">
+              <div>
+                <img [src]='user.picture["large"]' alt="">
+              </div>
+              <span>{{user.name["first"]}}</span>
+              <span>{{user.name["last"]}}</span>
+              <div class="status">online</div>
             </div>
-            <!--<div>{{user.username}}</div>-->
-            <h1>ilya123{{user.email}}</h1>
-            <div class="status">online</div>
-          </div>
-          </div>
-          <div class="wave-wrapp">
-            <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
-              <defs>
-                <path id="gentle-wave" d="m -160,44.4 c 30,0 58,-18 87.7,-18 30.3,0 58.3,18 87.3,18 30,0 58,-18 88,-18 30,0 58,18 88,18 l 0,34.5 -351,0 z" />
-              </defs>
-              <g class="parallax">
-                <use xlink:href="#gentle-wave" x="50" y="0" fill="rgba(255, 255, 255, 0.48)"/>
-                <use xlink:href="#gentle-wave" x="50" y="3" fill="rgba(255, 255, 255, 0.78)"/>
-                <use xlink:href="#gentle-wave" x="50" y="6" fill="rgba(255, 255, 255, 0.8)"/>
-              </g>
-            </svg>
-          </div>
-        </div>
-        <div class="content-wrapp">
-          <div class="nav-group">
-            <nav id="master-nav">
-              <ul>
-                <li ><a class="glyphicon glyphicon-user" href=""></a></li>
-                <li ><a href="" class="glyphicon glyphicon-envelope"></a></li>
-                <li ><a href="" class="glyphicon glyphicon-calendar"></a></li>
-                <li ><a href="" class="glyphicon glyphicon-map-marker"></a></li>
-                <li ><a href="" class="glyphicon glyphicon-phone-alt"></a></li>
-                <li ><a href="" class="glyphicon glyphicon-lock"></a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <div class="profile-setting">
-          <div class="information">
-            <div class="public">
-              <p>
-                PUBLIC INFORMATION
-              </p>
-
+            <div class="wave-wrapp">
+              <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+                <defs>
+                  <path id="gentle-wave" d="m -160,44.4 c 30,0 58,-18 87.7,-18 30.3,0 58.3,18 87.3,18 30,0 58,-18 88,-18 30,0 58,18 88,18 l 0,34.5 -351,0 z" />
+                </defs>
+                <g class="parallax">
+                  <use xlink:href="#gentle-wave" x="50" y="0" fill="rgba(255, 255, 255, 0.48)"/>
+                  <use xlink:href="#gentle-wave" x="50" y="3" fill="rgba(255, 255, 255, 0.78)"/>
+                  <use xlink:href="#gentle-wave" x="50" y="6" fill="rgba(255, 255, 255, 0.8)"/>
+                </g>
+              </svg>
             </div>
+          </div>
+          <div class="content-wrapp">
+            <div class="nav-group">
+              <nav id="master-nav">
+                <ul>
+                  <li (click)="opn_info('user')"><i class="glyphicon glyphicon-user" ></i></li>
+                  <li (click)="opn_info('sms')"><i class="glyphicon glyphicon-envelope"></i></li>
+                  <li (click)="opn_info('calendar')"><i class="glyphicon glyphicon-calendar"></i></li>
+                  <li (click)="opn_info('map')"><i  class="glyphicon glyphicon-map-marker"></i></li>
+                  <li (click)="opn_info('phone')"><i class="glyphicon glyphicon-phone-alt"></i></li>
+                  <li (click)="opn_info('lock')"><i class="glyphicon glyphicon-lock"></i></li>
+                </ul>
+              </nav>
+              <div class="information">
+                <div *ngIf="'user'===infoclick"  class="animated bounceInLeft">
+
+                  <img [src]='user.picture["large"]' alt="">
+                  <div class="informationIn">
+                    <span>Hello {{user.name["title"]}}</span><br>
+                    <span>First name: {{user.name["first"]}}</span><br>
+                    <span>Last name:{{user.name["last"]}}</span><br>
+                  </div>
+                  </div>
+                <div *ngIf="'sms'===infoclick" class="animated bounceInLeft">
+                  <img [src]='user.picture["large"]' alt="">
+                  <div class="informationIn">
+                    <span> <i class="glyphicon glyphicon-envelope"></i>E-mail: {{user.email}}</span><br>
+                    <span><i class="glyphicon glyphicon-pushpin"></i>Phone: {{user.phone}}</span><br>
+                  </div>
+                </div>
+                <div *ngIf="'calendar'===infoclick" class="animated bounceInLeft">
+                  <img [src]='user.picture["large"]' alt="">
+                  <div class="informationIn">
+                    <span> <i class="glyphicon glyphicon-calendar"></i>B-day: {{user.dob}}</span><br>
+                    <span><i class="glyphicon glyphicon-pushpin"></i>Date of registration: {{user.registered}}</span><br>
+                  </div>
+                </div>
+                <div *ngIf="'map'===infoclick" class="animated bounceInLeft">
+                  <img [src]='user.picture["large"]' alt="">
+                  <div class="informationIn">
+                    <span> <i class="glyphicon glyphicon-pushpin"></i>City: {{user.location["city"]}}</span><br>
+                    <span><i class="glyphicon glyphicon-pushpin"></i>Street: {{user.location["street"]}}</span><br>
+                    <span><i class="glyphicon glyphicon-pushpin"></i>State: {{user.location["state"]}}</span><br>
+                  </div>
+                </div>
+                <div *ngIf="'phone'===infoclick" class="animated bounceInLeft">
+                  <img [src]='user.picture["large"]' alt="">
+                  <div class="informationIn">
+                    <span>Contacts</span>
+                    <span> <i class="glyphicon glyphicon-pushpin"></i>Phone: {{user.phone}}</span><br>
+                    <span><i class="glyphicon glyphicon-pushpin"></i>E-mail {{user.email}}</span><br>
+                  </div>
+                </div>
+                <div *ngIf="'lock'===infoclick" class="animated bounceInLeft">
+                  <img [src]='user.picture["large"]' alt="">
+                  <div class="informationIn">
+                    <span>Contacts</span>
+                    <span> <i class="glyphicon glyphicon-pushpin"></i>Username: {{user.login["username"]}}</span><br>
+                    <span><i class="glyphicon glyphicon-pushpin"></i>Password: {{user.login["password"]}}</span><br>
+                    <span><i class="glyphicon glyphicon-pushpin"></i>Password: {{user.login["md5"]}}</span><br>
+                  </div>
+                </div>
+              </div>
+              </div>
           </div>
         </div>
       </div>
