@@ -9,7 +9,7 @@ import {isNullOrUndefined} from "util";
 })
 export class UserComponent implements OnInit {
 
-
+  users_img:string [];
   errorMessage: string;
   // user:User;
   users: User[];
@@ -23,10 +23,12 @@ export class UserComponent implements OnInit {
         error => this.errorMessage = <any>error);
 
   }
+  // get_img(img:string){
+  //   this.users_img[this.users_img.length+1]=img;
+  // }
+  opn_info(id:string ,us:any){
 
-  opn_info(id:string){
     if(id==='user' ){
-      console.log("user");
       this.infoclick='user';
     }
     else if(id==='sms'){

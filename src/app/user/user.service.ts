@@ -22,7 +22,7 @@ export class UserService {
     return this._http.get(this.userUrl)
       .map((response: Response) => <User[]> response.json()['results'])
       .do(data => this.users = data)
-       .do(data => console.log(this.users))
+       // .do(data => console.log(this.users))
       .catch(this.handleError);
   }
   // error handler every exception or error will be logged to the console
